@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLUESKY Siding & Cladding</title>
+
+  <style>
+    :root {
+      --blue: #0a66c2;
+      --dark-blue: #063a6b;
+      --light-blue: #f2f8ff;
+      --white: #ffffff;
+      --gray: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--blue);
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      color: var(--blue);
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1604014237800-1c9102c219da");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: var(--blue);
+      color: var(--white);
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: var(--dark-blue);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: var(--blue);
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--light-blue);
+    }
+
+    .about p {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: var(--gray);
+      font-size: 18px;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 35px;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .service-card h3 {
+      margin-bottom: 15px;
+      color: var(--dark-blue);
+    }
+
+    /* STATS */
+    .stats {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 42px;
+    }
+
+    .stat h4 {
+      margin: 12px 0 8px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .stat p {
+      font-size: 15px;
+      opacity: 0.9;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--light-blue);
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact button {
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav">
+      <div class="logo">BLUESKY Siding & Cladding</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Building Stronger Exteriors Under Open Skies</h1>
+      <p>
+        Premium siding and cladding solutions engineered for durability,
+        performance, and modern design.
+      </p>
+      <a href="#contact" class="btn">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Us</h2>
+      </div>
+      <p>
+        BLUESKY Siding & Cladding specializes in high-quality exterior systems
+        for residential and commercial buildings. With expert craftsmanship
+        and industry-leading materials, we deliver durable, modern, and
+        efficient building envelopes.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+ <section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Siding Installation</h3>
+        <p>Professional installation of high-performance siding systems.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Exterior Cladding Systems</h3>
+        <p>Durable and modern cladding solutions for long-term protection.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Residential & Commercial Projects</h3>
+        <p>Complete exterior solutions for homes, offices, and industrial buildings.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Metal Siding & Coating</h3>
+        <p>Advanced metal siding systems with protective coatings.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Custom Aluminum & Copper Work</h3>
+        <p>Precision-crafted custom metal fabrication for architectural details.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Aluminum & Copper Flashing</h3>
+        <p>High-quality flashing systems for weatherproof performance.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Vinyl, Fiber Cement & Metal Siding</h3>
+        <p>A wide range of siding options to match design and durability needs.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Siding Repairs & Maintenance</h3>
+        <p>Reliable repair and maintenance services to extend siding lifespan.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Coping & Flashing Systems</h3>
+        <p>Precision-installed coping and flashing for superior building protection.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+
+      <div class="stat">
+        <h3 class="counter" data-target="3453">0</h3>
+        <h4>Happy Customers</h4>
+        <p>Trusted for quality metalwork and reliable service—our customers speak for us.</p>
+      </div>
+
+      <div class="stat">
+        <h3 class="counter" data-target="4234">0</h3>
+        <h4>Projects Done</h4>
+        <p>From prototypes to precision builds—every project delivered with excellence.</p>
+      </div>
+
+      <div class="stat">
+        <h3 class="counter" data-target="1831">0</h3>
+        <h4>Expert Workers</h4>
+        <p>Skilled, dedicated, and precise—our experts shape excellence every day.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2022 BLUESKY Siding & Cladding. All rights reserved.</p>
+  </footer>
+
+  <!-- COUNTER SCRIPT -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
+
+</body>
+</html>
